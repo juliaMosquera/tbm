@@ -1,1 +1,47 @@
-<p>save-task works!</p>
+<div class="form">
+    <mat-card class="card">
+      <mat-card-title>Register Task</mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input [(ngModel)]="taskData.name"
+            matInput
+            placeholder="Name task"
+            required
+            />
+          </mat-form-field>
+          <mat-form-field>
+              <input [(ngModel)]="taskData.description"
+              type="description"
+            matInput
+            placeholder="Description"
+            required
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="taskData.imageUrl"
+            type="imageUrl"
+          matInput
+          placeholder="ImageUrl"
+          required
+          />
+        </mat-form-field>
+          <mat-form-field>
+              <input [(ngModel)]="taskData.taskStatus"
+              type="taskStatus"
+            matInput
+            placeholder="TaskStatus"
+            required
+            />
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+          <button
+          (click)="saveTask()"
+          class="button"
+          mat-raised-button
+          >Register</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
